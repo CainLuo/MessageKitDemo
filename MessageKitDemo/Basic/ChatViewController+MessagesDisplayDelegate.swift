@@ -19,8 +19,10 @@ extension ChatViewController: MessagesDisplayDelegate {
     
     func detectorAttributes(for detector: DetectorType, and message: MessageType, at indexPath: IndexPath) -> [NSAttributedString.Key: Any] {
         switch detector {
-        case .hashtag, .mention: return [.foregroundColor: UIColor.blue]
-        default: return MessageLabel.defaultAttributes
+        case .hashtag, .mention:
+            return [.foregroundColor: UIColor.blue]
+        default:
+            return MessageLabel.defaultAttributes
         }
     }
     
@@ -36,8 +38,16 @@ extension ChatViewController: MessagesDisplayDelegate {
     
     func messageStyle(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> MessageStyle {
         
-        let tail: MessageStyle.TailCorner = isFromCurrentSender(message: message) ? .bottomRight : .bottomLeft
-        return .bubbleTail(tail, .curved)
+//        let tail: MessageStyle.TailCorner = isFromCurrentSender(message: message) ? .bottomRight : .bottomLeft
+//        return .bubbleTail(tail, .curved)
+        
+        return .custom { view in
+            let radius: CGFloat = 8
+            let path = UIBezierPath(roundedRect: view.bounds, byRoundingCorners: .allCorners, cornerRadii: CGSize(width: radius, height: radius))
+            let mask = CAShapeLayer()
+            mask.path = path.cgPath
+            view.layer.mask = mask
+        }
     }
     
     func configureAvatarView(_ avatarView: AvatarView, for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) {
