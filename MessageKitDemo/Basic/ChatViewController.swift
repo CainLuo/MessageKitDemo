@@ -28,7 +28,7 @@ class ChatViewController: MessagesViewController {
         title = "客服中心"
         configMessageCollectionView()
         configInputBar()
-//        loadFirstMessages()
+        loadFirstMessages()
     }
 }
 
