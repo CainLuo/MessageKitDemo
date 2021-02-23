@@ -26,6 +26,7 @@
 		4D1AF0A725E37ECD00CDC3E1 /* ChatViewController+MessagesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1AF0A625E37ECD00CDC3E1 /* ChatViewController+MessagesDataSource.swift */; };
 		4D1AF0AA25E3801B00CDC3E1 /* ChatViewController+MessagesDisplayDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1AF0A925E3801B00CDC3E1 /* ChatViewController+MessagesDisplayDelegate.swift */; };
 		4D1AF0AD25E3807900CDC3E1 /* BasicAudioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1AF0AC25E3807900CDC3E1 /* BasicAudioController.swift */; };
+		BF7BE92825E562BC00B41F7E /* MockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7BE92725E562BC00B41F7E /* MockService.swift */; };
 		C2A1C10C21DEBB47C4001F28 /* Pods_MessageKitDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 870E4F94B89858623423DF7D /* Pods_MessageKitDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		4D1AF0AC25E3807900CDC3E1 /* BasicAudioController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicAudioController.swift; sourceTree = "<group>"; };
 		870E4F94B89858623423DF7D /* Pods_MessageKitDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MessageKitDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB84BBFD3E866720B8C9770E /* Pods-MessageKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessageKitDemo.debug.xcconfig"; path = "Target Support Files/Pods-MessageKitDemo/Pods-MessageKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		BF7BE92725E562BC00B41F7E /* MockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 			children = (
 				4D1AF09425E37D6C00CDC3E1 /* SampleData.swift */,
 				4D1AF09825E37DAA00CDC3E1 /* Lorem.swift */,
+				BF7BE92725E562BC00B41F7E /* MockService.swift */,
 			);
 			path = MockJSON;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				4D1AF07E25E36AAD00CDC3E1 /* ChatViewController+MessageLabelDelegate.swift in Sources */,
 				4D1AF08125E36AD600CDC3E1 /* ChatViewController+MessageCellDelegate.swift in Sources */,
 				4D1AF07925E36A5100CDC3E1 /* ChatViewController.swift in Sources */,
+				BF7BE92825E562BC00B41F7E /* MockService.swift in Sources */,
 				4D1AF09025E37CF600CDC3E1 /* MockUser.swift in Sources */,
 				4D1AF08425E36B2600CDC3E1 /* ChatViewController+MessagesLayoutDelegate.swift in Sources */,
 				4D1AF0AA25E3801B00CDC3E1 /* ChatViewController+MessagesDisplayDelegate.swift in Sources */,
