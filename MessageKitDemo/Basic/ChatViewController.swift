@@ -30,8 +30,29 @@ class ChatViewController: MessagesViewController {
         configInputBar()
         loadFirstMessages()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        MockSocket.shared.connect(with: [SampleData.shared.nathan, SampleData.shared.wu])
+            .onTypingStatus { [weak self] in
+                self?.setTypingIndicatorViewHidden(false)
+            }.onNewMessage { [weak self] message in
+                self?.setTypingIndicatorViewHidden(true, performUpdates: {
+                    self?.insertMessage(message)
+                })
+        }
+    }
+    
+    func setTypingIndicatorViewHidden(_ isHidden: Bool, performUpdates updates: (() -> Void)? = nil) {
+        updateTitleView(title: "MessageKit", subtitle: isHidden ? "2 Online" : "Typing...")
+        setTypingIndicatorViewHidden(isHidden, animated: true, whilePerforming: updates) { [weak self] success in
+            if success, self?.isLastSectionVisible() == true {
+                self?.messagesCollectionView.scrollToBottom(animated: true)
+            }
+        }
+    }
 }
-
 
 // MARK: - Config UIs
 extension ChatViewController {
