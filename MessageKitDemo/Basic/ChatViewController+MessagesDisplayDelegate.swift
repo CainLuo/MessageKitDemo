@@ -12,7 +12,6 @@ import MapKit
 extension ChatViewController: MessagesDisplayDelegate {
     
     // MARK: - Text Messages
-    
     func textColor(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> UIColor {
         return isFromCurrentSender(message: message) ? .white : .darkText
     }
