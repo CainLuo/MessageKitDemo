@@ -56,6 +56,12 @@ extension ChatViewController {
         messageInputBar.sendButton.setTitle("发送", for: .normal)
         messageInputBar.sendButton.setTitleColor(.red, for: .normal)
         messageInputBar.sendButton.setTitleColor(UIColor.red.withAlphaComponent(0.3), for: .highlighted)
+        let view = UIView()
+        view.backgroundColor = .red
+        
+        messageInputBar.separatorLine.isHidden = true
+        messageInputBar.setRightStackViewWidthConstant(to: 0, animated: false)
+        messageInputBar.setMiddleContentView(view, animated: false)
     }
     
     func loadFirstMessages() {
