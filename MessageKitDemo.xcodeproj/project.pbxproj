@@ -27,6 +27,7 @@
 		4D1AF0AA25E3801B00CDC3E1 /* ChatViewController+MessagesDisplayDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1AF0A925E3801B00CDC3E1 /* ChatViewController+MessagesDisplayDelegate.swift */; };
 		4D1AF0AD25E3807900CDC3E1 /* BasicAudioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1AF0AC25E3807900CDC3E1 /* BasicAudioController.swift */; };
 		BF7BE92825E562BC00B41F7E /* MockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7BE92725E562BC00B41F7E /* MockService.swift */; };
+		BFA9444926596022000A7D75 /* ChatInputBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA9444826596022000A7D75 /* ChatInputBar.swift */; };
 		C2A1C10C21DEBB47C4001F28 /* Pods_MessageKitDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 870E4F94B89858623423DF7D /* Pods_MessageKitDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		870E4F94B89858623423DF7D /* Pods_MessageKitDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MessageKitDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB84BBFD3E866720B8C9770E /* Pods-MessageKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessageKitDemo.debug.xcconfig"; path = "Target Support Files/Pods-MessageKitDemo/Pods-MessageKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		BF7BE92725E562BC00B41F7E /* MockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockService.swift; sourceTree = "<group>"; };
+		BFA9444826596022000A7D75 /* ChatInputBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInputBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				4D1AF0A625E37ECD00CDC3E1 /* ChatViewController+MessagesDataSource.swift */,
 				4D1AF0A925E3801B00CDC3E1 /* ChatViewController+MessagesDisplayDelegate.swift */,
 				4D1AF08325E36B2600CDC3E1 /* ChatViewController+MessagesLayoutDelegate.swift */,
+				BFA9444826596022000A7D75 /* ChatInputBar.swift */,
 			);
 			path = Basic;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 			files = (
 				4D1AF05025E3667000CDC3E1 /* ViewController.swift in Sources */,
 				4D1AF0AD25E3807900CDC3E1 /* BasicAudioController.swift in Sources */,
+				BFA9444926596022000A7D75 /* ChatInputBar.swift in Sources */,
 				4D1AF04C25E3667000CDC3E1 /* AppDelegate.swift in Sources */,
 				4D1AF08725E36B4600CDC3E1 /* ChatViewController+InputBarDelegate.swift in Sources */,
 				4D1AF0A725E37ECD00CDC3E1 /* ChatViewController+MessagesDataSource.swift in Sources */,
@@ -445,7 +449,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MessageKitDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -465,7 +469,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MessageKitDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

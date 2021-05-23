@@ -1,14 +1,14 @@
 PODS:
-  - InputBarAccessoryView (4.3.3):
-    - InputBarAccessoryView/Core (= 4.3.3)
-  - InputBarAccessoryView/Core (4.3.3)
+  - InputBarAccessoryView (5.3.1):
+    - InputBarAccessoryView/Core (= 5.3.1)
+  - InputBarAccessoryView/Core (5.3.1)
   - LookinServer (1.0.0)
-  - MessageKit (3.1.0):
-    - InputBarAccessoryView (~> 4.3.0)
+  - MessageKit (3.6.1):
+    - InputBarAccessoryView (~> 5.3.1)
 
 DEPENDENCIES:
   - LookinServer
-  - MessageKit (~> 3.1.0)
+  - MessageKit
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -17,10 +17,10 @@ SPEC REPOS:
     - MessageKit
 
 SPEC CHECKSUMS:
-  InputBarAccessoryView: 8e7fc09e9cba75e0fee5da13450e15c194806f69
+  InputBarAccessoryView: 1f75d8c9f75e5e57f3ffac36ed58635a8005e0bc
   LookinServer: 0002891cd3cec5e082a910e897dfe71b4f06b89e
-  MessageKit: 3beb578737a5aa2bba25cc27c7b6d6faa09af5a7
+  MessageKit: d153fbbbcb12f3f4045a1ba8874298924dacfb62
 
-PODFILE CHECKSUM: 7185f99cd86d513158ba0a9fb37702b24d0363b1
+PODFILE CHECKSUM: 3a0341f7630c2aba4311e62303909f4ff7b45e32
 
 COCOAPODS: 1.10.1

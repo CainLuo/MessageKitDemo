@@ -27,7 +27,7 @@ extension ChatViewController: InputBarAccessoryViewDelegate {
                 self?.messageInputBar.sendButton.stopAnimating()
                 self?.messageInputBar.inputTextView.placeholder = "输入内容"
                 self?.insertMessages(components)
-                self?.messagesCollectionView.scrollToBottom(animated: true)
+                self?.messagesCollectionView.scrollToLastItem(animated: true)
             }
         }
     }
@@ -56,7 +56,7 @@ extension ChatViewController: InputBarAccessoryViewDelegate {
             }
         }, completion: { [weak self] _ in
             if self?.isLastSectionVisible() == true {
-                self?.messagesCollectionView.scrollToBottom(animated: true)
+                self?.messagesCollectionView.scrollToLastItem(animated: true)
             }
         })
     }

@@ -48,7 +48,7 @@ class ChatViewController: MessagesViewController {
         updateTitleView(title: "MessageKit", subtitle: isHidden ? "2 Online" : "Typing...")
         setTypingIndicatorViewHidden(isHidden, animated: true, whilePerforming: updates) { [weak self] success in
             if success, self?.isLastSectionVisible() == true {
-                self?.messagesCollectionView.scrollToBottom(animated: true)
+                self?.messagesCollectionView.scrollToLastItem(animated: false)
             }
         }
     }
@@ -63,7 +63,7 @@ extension ChatViewController {
         messagesCollectionView.messagesLayoutDelegate = self
         messagesCollectionView.messagesDisplayDelegate = self
 
-        scrollsToBottomOnKeyboardBeginsEditing = true // default false
+        scrollsToLastItemOnKeyboardBeginsEditing = true // default false
         maintainPositionOnKeyboardFrameChanged = true // default false
         
         messagesCollectionView.addSubview(refreshControl)
@@ -71,20 +71,21 @@ extension ChatViewController {
     }
     
     private func configInputBar() {
+        messageInputBar = ChatInputBar()
         messageInputBar.delegate = self
         messageInputBar.inputTextView.tintColor = .red
         messageInputBar.inputTextView.placeholder = "输入内容"
         messageInputBar.sendButton.setTitle("发送", for: .normal)
-        messageInputBar.sendButton.setTitleColor(.red, for: .normal)
-        messageInputBar.sendButton.setTitleColor(UIColor.red.withAlphaComponent(0.3), for: .highlighted)
-        let view = UIView()
-        view.backgroundColor = .red
+//        messageInputBar.sendButton.setTitleColor(.red, for: .normal)
+//        messageInputBar.sendButton.setTitleColor(UIColor.red.withAlphaComponent(0.3), for: .highlighted)
+//        let view = UIView()
+//        view.backgroundColor = .red
         
-        messageInputBar.separatorLine.isHidden = true
-        messageInputBar.setRightStackViewWidthConstant(to: 0, animated: false)
-        messageInputBar.setMiddleContentView(view, animated: false)
+//        messageInputBar.separatorLine.isHidden = true
+//        messageInputBar.setRightStackViewWidthConstant(to: 0, animated: false)
+//        messageInputBar.setMiddleContentView(view, animated: false)
     }
-    
+        
     func loadFirstMessages() {
         DispatchQueue.global(qos: .userInitiated).async {
             let count = 20
@@ -92,7 +93,7 @@ extension ChatViewController {
                 DispatchQueue.main.async {
                     self.messageList = messages
                     self.messagesCollectionView.reloadData()
-                    self.messagesCollectionView.scrollToBottom()
+                    self.messagesCollectionView.scrollToLastItem(animated: false)
                 }
             }
         }
